@@ -1,427 +1,256 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="google-site-verification" content="4QxI3OMnFtcp5rNA3K7fDfzu0L2lqxOJ5M7mW5EfObU" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <title>Ruichi Yu - Waymo</title>
+        <meta name="author" content="Ruichi Yu">
+        <meta name="description" content="">
 
-<script language=javascript type='text/javascript'>
-function toggleHide(id) 
-{
-  if (document.getElementById)
-  {
-    obj = document.getElementById(id);
-    if (obj.style.display == "none")
-    {
-      obj.style.display = "";
-    } 
-    else 
-    {
-      obj.style.display = "none";
-    }
-  }
+        <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet"> 
+        <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Oswald:400,700' rel='stylesheet' type='text/css'>-->
+        <link href = "style.css" rel = stylesheet>
+        <script>
+            function showbib(tag) {
+                var x = document.getElementById(tag);
+                if (x.style.display == "block")
+                    x.style.display = "none";
+                else x.style.display = "block";
+            }
+        </script>
+    </head>
+    <body>
+        <div id=main>
+
+            <div style="padding-top: 10px">
+                <img src="headpic.jpg" style="float: left; height:190px; margin-right: 30px; margin-top: 8px" />
+                <!--<embed type="image/svg+xml" src="pic/umdlogo.svg" style="height: 40px; width: 300px; float: right; padding-top:10px; padding-bottom: 10px;" /> -->
+                <!-- <img src="pic/umdseal.png" style="height: 130px; float: right; padding-top:10px; padding-bottom: 10px;" /> -->
+                <div>
+                    <div class=name>Ruichi Yu</div>
+                    <p> Perception Software Engineer<br>
+                    Waymo LLC.
+<!--                     <p><a class=link href="cv-anyli.pdf">Curriculum Vitae</a>
+ -->                    <p><a class=link href="mailto:yrcbsg@gmail.com">Email</a><!--<a class="cv" href="resume-angli.pdf">Resume</a> -->&nbsp;&nbsp;&nbsp;<a class=link href="https://scholar.google.com/citations?user=EfP9RrMAAAAJ&hl=en">Google Scholar</a>
+                    <br>
+                </div>
+            </div>
+            <div class=section>
+                <h3>Biography</h3>
+                <p> I am a Perception Software Engineer at <a href="https://waymo.com/">Waymo LLC</a>, Mountain View, CA. My recent research interest includes deep learning applied on tracking/data association, visual recognition in images and videos, language and vision, weakly supervised learning and deep network compression.
+
+                <p>	I received my PhD at December 2018 at the Department of Computer Science at the University of Maryland, College Park, MD, advised by <a href="http://www.umiacs.umd.edu/~lsd/">Prof. Larry S. Davis.</a> I received my Master's degree from the Computer Science Department of Columbia University, New York, NY, working with <a href="http://www.ee.columbia.edu/~sfchang/"> Prof. Shih-Fu Chang.</a> Before that, I graduated from School of Information Science and Engineering, Southeast University, Nanjing in 2013.
+
+
+                <div class=section>
+                    <h3>Publication</h3>
+
+                    <ul class=paper>
+
+
+
+                        <li><span class="papertitle">Layout-induced Video Representation for Recognizing Agent-in-Place Actions</span>  [&nbsp;<a class=link href="https://arxiv.org/pdf/1804.01429.pdf">PDF</a>&nbsp;] [&nbsp;<a class=link href="javascript:showbib('Yu_2018_action')">Bibtex</a>&nbsp;]<br> 
+                            Ruichi Yu, Hongcheng Wang, Ang Li, Jingxiao Zheng, Vlad I. Morariu, Larry S. Davis<br>
+                            IEEE International Conference on Computer Vision <b>(<a href="http://iccv2019.thecvf.com">ICCV</a>)</b>, Seoul, Korea, 2019.
+                            <div id="Yu_2018_action" style="display:none"><pre><code>@article{Yu2018RepresentingVB,
+  title={Layout-induced Video Representation for Recognizing Agent-in-Place Actions},
+  author={Ruichi Yu and Hongcheng Wang and Ang Li and Jingxiao Zheng and Vlad I. Morariu and Larry S. Davis},
+  journal={CoRR},
+  year={2018},
+  volume={abs/1804.01429}
 }
+                            </code></pre></div>
 
-function hasClassName(classname, element)
-{
-  return String(element.className).split(/\s/).indexOf(classname) >= 0;
+
+<li><span class="papertitle">Uncertainty Modeling of Contextual-Connection between Tracklets for Unconstrained Video-based Face Recognition</span>  [&nbsp;<a class=link href="https://arxiv.org/pdf/1905.02756.pdf">PDF</a>&nbsp;] [&nbsp;<a class=link href="javascript:showbib('zheng_2019_uncertain')">Bibtex</a>&nbsp;]<br> 
+                            Jingxiao Zheng, Ruichi Yu,  Jun-Cheng Chen, Boyu Lu, Carlos Castillo, Rama Chellappa<br>
+                            IEEE International Conference on Computer Vision <b>(<a href="http://iccv2019.thecvf.com">ICCV</a>)</b>, Seoul, Korea, 2019.
+                            <div id="zheng_2019_uncertain" style="display:none"><pre><code>@article{bibZhengUncertaintyarxiv2019",
+                                  
+  title={Uncertainty Modeling of Contextual-Connection between Tracklets for Unconstrained Video-based Face Recognitionn},
+  author={Jingxiao Zheng and Ruichi Yu and Jun-Cheng Chen and Boyu Lu and Carlos Castillo and Rama Chellappa},
+  journal={arXiv preprint arXiv:1905.02756},
+  year={2019}
 }
+                            </code></pre></div>
 
-function showOnlySubset(all, subset)
-{
-  if(document.getElementsByClassName)
-  {
-    elements = document.getElementsByClassName(all);
-    for(var i = 0; i < elements.length; i++)
-    {
-      if(hasClassName(subset, elements[i]))
-      {
-        //elements[i].style.backgroundColor="#888888";
-        elements[i].style.display="";
-      }
-      else
-      {
-        //elements[i].style.backgroundColor="#FFFFFF";
-        elements[i].style.display="none";
-      }
-    }
-
-    if(all === subset)
-    {
-      document.getElementById("show_all_pubs").style.display = "none";
-    }
-    else
-    {
-      document.getElementById("show_all_pubs").style.display = "";
-    }
-  }
+<li><span class="papertitle">Modeling Local Geometric Structure of 3D Point Clouds using Geo-CNN</span>  [&nbsp;<a class=link href="https://arxiv.org/pdf/1811.07782.pdf">PDF</a>&nbsp;] [&nbsp;<a class=link href="javascript:showbib('Lan_2019_geocnn')">Bibtex</a>&nbsp;]<br> 
+                            Shiyi Lan, Ruichi Yu, Gang Yu, Larry S. Davis,<br>
+                            IEEE Conference on Computer Vision and Pattern Recognition  <b>(<a href="http://cvpr2019.thecvf.com">CVPR</a>)</b>, Long Beach, CA, 2019.
+                            <div id="Lan_2019_geocnn" style="display:none"><pre><code>@ibYuGeoCNNArxiv2018",
+                                  
+  title={Modeling Local Geometric Structure of 3D Point Clouds using Geo-CNN},
+  author={Shiyi Lan and Ruichi Yu and Gang Yu and Larry S. Davis},
+  journal={arXiv preprint arXiv:1811.07782},
+  year={2018}
 }
-</script> 
+                            </code></pre></div>
+                        
+
+                            <li><span class="papertitle">C-WSL: Count-guided Weakly Supervised Localization</span>  [&nbsp;<a class=link href="https://arxiv.org/pdf/1711.05282.pdf">PDF</a>&nbsp;] [&nbsp;<a class=link href="javascript:showbib('Gao_2018_ECCV')">Bibtex</a>&nbsp;]<br> 
+                                Mingfei Gao, Ang Li, Ruichi Yu, Vlad I. Morariu, Larry S. Davis<br>
+                                European Conference on Computer Vision <b>(<a href="https://eccv2018.org/">ECCV</a>)</b>, Munich, Germany, 2018.<br>
+                                <div id="Gao_2018_ECCV" style="display:none"><pre><code>@InProceedings{gao2017cwsl,
+  title={C-WSL: Count-guided Weakly Supervised Localization.},
+  author={Mingfei Gao and Ang Li and Ruichi Yu and Vlad I. Morariu and Larry S. Davis},
+  booktitle={European Conference on Computer Vision (ECCV)},
+  year={2018}
+}
+                                </code></pre></div> 
+
+                                <li><a class="papertitle" href="https://arxiv.org/abs/1711.05908">NISP: Pruning Networks using Neuron Importance Score Propagation</a> [&nbsp;<a class=link href="https://arxiv.org/pdf/1711.05908.pdf">PDF</a>&nbsp;] [&nbsp;<a class=link href="javascript:showbib('Yu_2018_CVPR')">Bibtex</a>&nbsp;] <br>
+                                    Ruichi Yu, Ang Li, Chun-Fu Chen, Jui-Hsin Lai, Vlad I. Morariu,
+                                    Xintong Han, Mingfei Gao, Ching-Yung Lin, Larry S. Davis<br>
+                                    IEEE Conference on Computer Vision and Pattern Recognition <b>(<a href="http://cvpr2018.thecvf.com">CVPR [Spotlight]</a>)</b>, Salt Lake City, Utah, 2018.<br>
+                                    <div id="Yu_2018_CVPR" style="display:none"><pre><code>@InProceedings{Yu_2018_CVPR,
+author = {Yu, Ruichi and Li, Ang and Chen, Chun-Fu and Lai, Jui-Hsin and Morariu, Vlad I. and Han, Xintong and Gao, Mingfei and Lin, Ching-Yung and Davis, Larry S.},
+title = {NISP: Pruning Networks Using Neuron Importance Score Propagation},
+booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2018}
+}
+                                    </code></pre></div>
+
+                                    <li><a class="papertitle" href="https://arxiv.org/abs/1711.05908">VITON: An Image-based Virtual Try-on Network</a> [&nbsp;<a class=link href="https://arxiv.org/abs/1711.08447">PDF</a>&nbsp;] [&nbsp;<a class=link href="javascript:showbib('han_2018_CVPR')">Bibtex</a>&nbsp;] <br>
+                                    Xintong Han, Zuxuan Wu, Zhe Wu, Ruichi Yu, Larry S. Davis<br>
+                                    IEEE Conference on Computer Vision and Pattern Recognition <b>(<a href="http://cvpr2018.thecvf.com">CVPR [Spotlight]</a>)</b>, Salt Lake City, Utah, 2018.<br>
+                                    <div id="han_2018_CVPR" style="display:none"><pre><code>@InProceedings{han_2018_CVPR,
+author = {Xintong Han and Zuxuan Wu and Zhe Wu and Ruichi Yu and Larry S. Davis},
+title = {VITON: An Image-based Virtual Try-on Network},
+booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2018}
+}
+                                    </code></pre></div>
 
 
-<title>Ruichi Yu - Curriculum Vitae</title>
 
-<meta name="viewport" content="width=device-width"/>
-<meta name="description" content="The Curriculum Vitae of Ruichi Yu."/>
-<meta charset="UTF-8"> 
+                                    
+                                    <li><a class="papertitle" href="javascript:void(0)">Dynamic Zoom-in Network for Fast Object Detection in Large Images</a> [&nbsp;<a class=link href="https://arxiv.org/pdf/1711.05187.pdf">PDF</a>&nbsp;] [&nbsp;<a class=link href="javascript:showbib('Gao_2018_CVPR')">Bibtex</a>&nbsp;]<br>
+                                        Mingfei Gao, Ruichi Yu, Ang Li, Vlad I. Morariu, Larry S. Davis<br>
+                                        IEEE Conference on Computer Vision and Pattern Recognition <b>(<a href="http://cvpr2018.thecvf.com">CVPR</a>)</b>, Salt Lake City, Utah, 2018.<br>
+                                        <div id=Gao_2018_CVPR style="display:none">
+                                            <pre><code>@InProceedings{Gao_2018_CVPR,
+author = {Gao, Mingfei and Yu, Ruichi and Li, Ang and Morariu, Vlad I. and Davis, Larry S.},
+title = {Dynamic Zoom-In Network for Fast Object Detection in Large Images},
+booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2018}
+}
+                                            </code></pre>
+                                        </div>
 
-<link type="text/css" rel="stylesheet" href="style.css">
-<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+                                        <li><a class="papertitle" href="javascript:void(0)">ReMotENet: Efficient Relevant Motion Event Detection for Large-scale Home Surveillance Videos</a> [&nbsp;<a class=link href="https://arxiv.org/abs/1801.02031">PDF</a>&nbsp;] [&nbsp;<a class=link href="javascript:showbib('yu_2018_wacv')">Bibtex</a>&nbsp;]<br>
+                                        Ruichi Yu, Hongcheng Wang, Larry S. Davis<br>
+                                        IEEE Winter Conference on Applications of Computer Vision <b>(<a href="https://wacv18.wacv.net/">WACV</a>)</b>, Lake Tahoe, CA, 2018.<br>
+                                        <div id=yu_2018_wacv style="display:none">
+                                            <pre><code>@InProceedings{yu_2018_wacv,
+author = {Ruichi Yu and Hongcheng Wang and Larry S. Davis},
+title = {ReMotENet: Efficient Relevant Motion Event Detection for Large-scale Home Surveillance Videos},
+booktitle = {IEEE Winter Conference on Applications of Computer Vision (WACV)},
+month = {June},
+year = {2018}
+}
+                                            </code></pre>
+                                        </div>
 
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-</head>
-<body id="top">
-<div id="cv" class="instaFade">
-	<div class="mainDetails">
-		<div id="headshot" class="quickFade">
-			<img src="Ruichi.jpeg" alt="Ruichi Yu" />
-		</div>
-		
-		<div id="name">
-			<h1 class="quickFade delayTwo">Ruichi (Rich) Yu</h1>
-			<h3 class="quickFade delayOne">余瑞驰</h2>
-			<h2 class="quickFade delayOne">Ph.D. </h2>
-		</div>
-		
-		<div id="contactDetails" class="quickFade delayOne" align="right">
-			<ul>
-				<li>Phone: (917)-536-7988</li>
-				<li>Email: <a href="mailto:yrcbsg@gmail.com" target="_blank">yrcbsg@gmail.com</a></li>
-				<li>Work email: <a href="mailto:richyu@waymo.com" target="_blank">richyu@waymo.com</a></li>
-			</ul>
-		</div>
-		<div class="clear"></div>
-	</div>
-	
-	<div id="mainArea" class="quickFade delayOne">
-		<section>
-			<article>
-				<div class="sectionTitle">
-					<h1>About Me</h1>
-				</div>
-				
-				<div class="sectionContent">
-					<p>I am working in Waymo as a perception software engineer. I received my PhD at December 2018 at the Department of Computer Science at the University of Maryland, College Park, MD, advised by <a href="http://www.umiacs.umd.edu/~lsd/">Prof. Larry S. Davis.</a> I received my Master's degree from the Computer Science Department of Columbia University, New York, NY, working with <a href="http://www.ee.columbia.edu/~sfchang/"> Prof. Shih-Fu Chang.</a> Before that, I graduated from School of Information Science and Engineering, Southeast University, Nanjing in 2013.</p>
-					<p>My recent research interest includes deep learning, visual recognition in images and videos, language and vision, weakly supervised learning and deep network compression.</p>
-				</div>
-			</article>
-			<div class="clear"></div>
-		</section>
-		
-		
-		<section>
-			<div class="sectionTitle">
-				<h1>Education</h1>
-			</div>
-			
-			<div class="sectionContent">
-				<article>
-					<h2>Doctor of Philosophy </h2>
-					<p class="subDetails">August 2015 - December 2018</p>
-					<p>Department of Computer Science, University of Maryland, College Park, MD.</p>
-					<p>Cummulative GPA: 4.0/4.0</p>
-				</article>
+                
 
-				<article>
-					<h2>Master of Science </h2>
-					<p class="subDetails">August 2013 - December 2014</p>
-					<p>Department of Computer Science, Columbia University, New York, NY</p>
-					<p>Cummulative GPA: 4.2/4.0</p>
-				</article>
-				
-				<article>
-					<h2>Bachelor of Science</h2>
-					<p class="subDetails">August 2009 - June 2013</p>
-					<p>School of Information Science and Engineering, Southeast University, Nanjing, China.</p>
-					<p>Cummulative GPA: 3.9/4.0</p>
-				</article>
-			</div>
-			<div class="clear"></div>
-		</section>
-		
-		
-		<section>
-			<div class="sectionTitle">
-				<h1>Publications</h1>
-			</div>
-			
-			<div class="sectionContent">
-			<ul>
+                            
 
-			<li><span style="font-weight: bold;">Ruichi Yu</span>, Hongcheng Wang, Ang Li, Jingxiao Zheng, Vlad I. Morariu, Larry S. Davis, <font face="arial" color="blue"><a href="https://arxiv.org/abs/1804.01429">"Layout-induced Video Representation for Recognizing Agent-in-Place Actions"</a></font>. (anonymous conference submission, 2019).
-			  <a href="javascript:toggleHide('bibYuLIVRArxiv2018')">BibTeX</a>
-			  <pre id="bibYuLIVRArxiv2018" class="bibtex" style="display:none">
-				@article{ibYuLIVRArxiv2018",
-				  title={Layout-induced Video Representation for Recognizing Agent-in-Place Actions},
-				  author={Ruichi Yu and Hongcheng Wang and Ang Li and Jingxiao Zheng and Vlad I. Morariu and Larry S. Davis},
-				  journal={arXiv preprint arXiv:1711.05282},
-				  year={2018}
-				}
-			  </pre>
-			  </li>
-			  <br />
-				
-			<li>Jingxiao Zheng, <span style="font-weight: bold;">Ruichi Yu</span>,  Jun-Cheng Chen, Boyu Lu, Carlos Castillo, Rama Chellappa, <font face="arial" color="blue"><a href="https://arxiv.org/abs/1905.02756?context=cs">"Modeling the
-				Uncertainty of Contextual-Connection between Tracklets for Unconstrained Video-based Face
-				Recognition"</a></font>. (anonymous conference submission, 2019).
-							  <a href="javascript:toggleHide('bibYuLIVRArxiv2018')">BibTeX</a>
-							  <pre id="bibZhengUncertaintyarxiv2019" class="bibtex" style="display:none">
-								@article{bibZhengUncertaintyarxiv2019",
-								  title={Modeling the
-				Uncertainty of Contextual-Connection between Tracklets for Unconstrained Video-based Face
-				Recognition},
-				  author={Jingxiao Zheng and Ruichi Yu and Jun-Cheng Chen and Boyu Lu and Carlos Castillo and Rama Chellappa},
-				  journal={arXiv preprint arXiv:1905.02756},
-				  year={2019}
-				}
-			  </pre>
-			  </li>
-			  <br />
-
-			<li>Shiyi Lan, <span style="font-weight: bold;">Ruichi Yu</span>, Gang Yu, Larry S. Davis, <font face="arial" color="blue"><a href="https://arxiv.org/pdf/1811.07782.pdf">"Modeling Local Geometric Structure of 3D Point Clouds using Geo-CNN"</a></font>. IEEE Conference on Computer Vision and Pattern Recognition <span style="font-weight: bold;">(CVPR)</span>, 2019.
-			  <a href="javascript:toggleHide('ibYuGeoCNNArxiv2018')">BibTeX</a>
-			  <pre id="ibYuGeoCNNArxiv2018" class="bibtex" style="display:none">
-				@article{ibYuGeoCNNArxiv2018",
-				  title={Modeling Local Geometric Structure of 3D Point Clouds using Geo-CNN},
-				  author={Shiyi Lan and Ruichi Yu and Gang Yu and Larry S. Davis},
-				  journal={arXiv preprint arXiv:1811.07782},
-				  year={2018}
-				}
-			  </pre>
-			  </li>
-			  <br />
-
-			<li>Mingfei Gao, Ang Li, <span style="font-weight: bold;">Ruichi Yu</span>,  Vlad I. Morariu, Larry S. Davis, <font face="arial" color="blue"><a href="https://arxiv.org/abs/1711.05282">"C-WSL: Count-guided Weakly Supervised Localization"</a></font>. European Conference on Computer Vision <span style="font-weight: bold;">(ECCV)</span>, 2018.
-			  <a href="javascript:toggleHide('bibGaoCwslArxiv2017')">BibTeX</a>
-			  <pre id="bibGaoCwslArxiv2017" class="bibtex" style="display:none">
-				@article{gao2018cwsl,
-				  title={C-WSL: Count-guided Weakly Supervised Localization.},
-				  author={Mingfei Gao and Ang Li and Ruichi Yu and Vlad I. Morariu and Larry S. Davis},
-				  journal={European Conference on Computer Vision},
-				  year={2018}
-				}
-			  </pre>
-			  </li>
-			  <br />
-			
-			  <li><span style="font-weight: bold;">Ruichi Yu</span>, Ang Li, Chun-Fu Chen, Jui-Hsin Lai, Vlad I. Morariu, Xintong Han, Mingfei Gao, Ching-Yung Lin, Larry S. Davis, <font face="arial" color="blue"><a href="https://arxiv.org/abs/1711.05908">"NISP: Pruning Networks Using Neuron Importance Score Propagation"</a></font>. IEEE Conference on Computer Vision and Pattern Recognition <span style="font-weight: bold;">(CVPR)</span>, 2018, <font face="arial" color="#cc0000">[Spotlight]</font>.
-			  <a href="javascript:toggleHide('bibYuCVPR2018')">BibTeX</a>
-			  <pre id="bibYuCVPR2018" class="bibtex" style="display:none">
-				@article{yu2018_NISP,
-				  title={NISP: Pruning Networks Using Neuron Importance Score Propagation},
-				  author={Ruichi Yu and Ang Li and Chun-Fu Chen and Jui-Hsin Lai and Vlad I. Morariu and Xintong Han and Mingfei Gao and Ching-Yung Lin and Larry S. Davis},
-				  journal={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-				  year={2018}
-				}
-			  </pre>
-			  </li>
-
-			  <br />
-
-			  <li>Mingfei Gao, <span style="font-weight: bold;">Ruichi Yu</span>, Ang Li, Vlad I. Morariu, Larry S. Davis, <font face="arial" color="blue"><a href="https://arxiv.org/abs/1711.05187">"Dynamic Zoom-in Network for Fast Object Detection in Large Images"</a></font>. IEEE Conference on Computer Vision and Pattern Recognition <span style="font-weight: bold;">(CVPR)</span>, 2018.
-			  <a href="javascript:toggleHide('bibGaoCVPR2018')">BibTeX</a>
-			  <pre id="bibGaoCVPR2018" class="bibtex" style="display:none">
-				@article{Gao2018_Dynamic,
-				  title={Dynamic Zoom-in Network for Fast Object Detection in Large Images},
-				  author={Ruichi Yu and Mingfei Gao, and Ang Li and Vlad I. Morariu and Larry S. Davis},
-				  journal={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-				  year={2018}
-				}
-			  </pre>
-			  </li>
-			  <br />
-
-			  <li>Xintong Han, Zuxuan Wu, Zhe Wu, <span style="font-weight: bold;">Ruichi Yu</span>, Larry S. Davis, <font face="arial" color="blue"><a href="https://arxiv.org/abs/1711.08447">"VITON: An Image-based Virtual Try-on Network"</font></a>. IEEE Conference on Computer Vision and Pattern Recognition <span style="font-weight: bold;">(CVPR)</span>, 2018, <font face="arial" color="#cc0000">[Spotlight]</font>.
-			  <a href="javascript:toggleHide('bibHanCVPR2018')">BibTeX</a>
-			  <pre id="bibHanCVPR2018" class="bibtex" style="display:none">
-				@article{Han2018_VITON,
-				  title={VITON: An Image-based Virtual Try-on Network},
-				  author={Xintong Han and Zuxuan Wu and Zhe Wu and Ruichi Yu and Larry S. Davis},
-				  journal={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-				  year={2018}
-				}
-			  </pre>
-			  </li>
-			  <br />
-
-			  <li><span style="font-weight: bold;">Ruichi Yu</span>, Hongcheng Wang, Larry S. Davis, <font face="arial" color="blue"><a href="https://arxiv.org/abs/1801.02031">"ReMotENet: Efficient Relevant Motion Event Detection for Large-scale Home Surveillance Videos"</font></a>. To appear in IEEE Winter Conference on Applications of Computer Vision <span style="font-weight: bold;">(WACV)</span>, 2018.
-			  <a href="javascript:toggleHide('bibYuWACV2018')">BibTeX</a>
-			  <pre id="bibYuWACV2018" class="bibtex" style="display:none">
-				@article{Yu2018_ReMotENet,
-				  title={ReMotENet: Efficient Relevant Motion Event Detection for Large-scale Home Surveillance Videos},
-				  author={Ruichi Yu and Hongcheng Wang and Larry S. Davis},
-				  journal={IEEE Winter Conference on Applications of Computer Vision (WACV)},
-				  year={2018}
-				}
-			  </pre>
-			  </li>
-			  <br />
-
-			  
-
-			  <li><span style="font-weight: bold;">Ruichi Yu</span>, Ang Li, Vlad I. Morariu, Larry S. Davis, <font face="arial" color="blue">
-			  <a href="https://arxiv.org/pdf/1707.09423v1.pdf">"Visual Relationship Detection with Internal and External Linguistic Knowledge Distillation"</a></font>. IEEE International Conference on Computer Vision <span style="font-weight: bold;">(ICCV)</span>, 2017.
-			  <a href="javascript:toggleHide('bibYuICCV2017')">BibTeX</a>
-			  <pre id="bibYuICCV2017" class="bibtex" style="display:none">
-			@article{yu2017_vrd_knowledge_distillation,
-			  title={Visual Relationship Detection with Internal and External Linguistic Knowledge Distillation.},
-			  author={Ruichi Yu and Ang Li and Vlad I. Morariu and Larry S. Davis},
-			  journal={IEEE International Conference on Computer Vision (ICCV)},
-			  year={2017}
-			}
-			  </pre>
-			  </li>
-			  <br />
-			  
-			  <li>Ang Li, Jin Sun, Joe Yue-Hei Ng, <span style="font-weight: bold;">Ruichi Yu</span>, Vlad I. Morariu, Larry S. Davis, <font face="arial" color="blue"><a href="https://arxiv.org/pdf/1611.09392.pdf">"Generating Holistic 3D Scene Abstractions for Text-based Image Retrieval"</a></font>. IEEE Conference on Computer Vision and Pattern Recognition <span style="font-weight: bold;">(CVPR)</span>, 2017.
-			  <a href="javascript:toggleHide('bibLiCVPR2017')">BibTeX</a>
-			  <pre id="bibLiCVPR2017" class="bibtex" style="display:none">
-				@article{li2017_3dscenefromtext,
-				  title={Generating Holistic 3D Scene Abstractions for Text-based Image Retrieval.},
-				  author={Ang Li and Jin Sun and Joe Yue-Hei Ng and Ruichi Yu and Vlad I. Morariu and Larry S. Davis},
-				  journal={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-				  year={2017}
-				}
-			  </pre>
-			  </li>
-			  <br />
-
-			  <li><span style="font-weight: bold;">Ruichi Yu</span>, Jui-Hsin Lai, Shun-Xuan Wang, Ching-Yung Lin, <font face="arial" color="blue"><a href="https://www.igi-global.com/article/brain-neuron-network-extraction-and-analysis-of-live-mice-from-imaging-videos/182648">"Brain Neuron Network Extraction and Analysis of Live Mice from Imaging Videos"</a></font>. International Journal of Multimedia Data Engineering and Management <span style="font-weight: bold;">(IJMDEM)</span> 8(3): 1-20, 2017.</li>
-			  <br />
-
-			  <li><span style="font-weight: bold;">Ruichi Yu</span>, Xi Chen, Vlad I. Morariu, Larry S. Davis, <font face="arial" color="blue"><a href="https://arxiv.org/abs/1609.02948">"The Role of Context Selection in Object Detection"</a></font>. British Machine Vision Conference <span style="font-weight: bold;">(BMVC)</span>, 2016, <font face="arial" color="#cc0000">[ORAL]</font>.
-			  <a href="javascript:toggleHide('bibYuBMVC2016')">BibTeX</a>
-			  <pre id="bibYuBMVC2016" class="bibtex" style="display:none">
-			@inproceedings{yu16objectcontextselection,
-			  author = {Ruichi Yu and Xi Chen and Vlad I. Morariu and Larry S. Davis},
-			  title = {The Role of Context Selection in Object Detection},
-			  booktitle = {British Machine Vision Conference (BMVC)},
-			  year      = {2016}
-			}
-			  </pre>
-			  </li>
-			  <br />
+                                            <li><a class="papertitle" href="https://arxiv.org/abs/1707.09423">Visual Relationship Detection with Internal and External Linguistic Knowledge Distillation</a> [&nbsp;<a class=link href="https://arxiv.org/pdf/1707.09423v1.pdf">PDF</a>&nbsp;] [&nbsp;<a class=link href="http://openaccess.thecvf.com/content_iccv_2017/html/Yu_Visual_Relationship_Detection_ICCV_2017_paper.html">Bibtex</a>&nbsp;] <br>
+                                                Ruichi Yu, Ang Li, Vlad I. Morariu, Larry S. Davis<br>
+                                                IEEE International Conference on Computer Vision <b>(<a href="http://iccv2017.thecvf.com">ICCV</a>)</b>, Venice, Italy, 2017.
 
 
-			  <li>Jui-Hsin Lai, <span style="font-weight: bold;">Ruichi Yu</span>, Ching-Yung Lin, <font face="arial" color="blue"><a href="http://ieeexplore.ieee.org/document/7823669/">"Neuron Activity Extraction and Network Analysis on Mouse Brain Videos"</a></font>. IEEE International Symposium on Multimedia <span style="font-weight: bold;">(ISM)</span>, 2016.</li>
-			  <br />
 
-			  <li><span style="font-weight: bold;">Ruichi Yu</span>, Shuguan Yang, Guifan Li, Sambit Sahu, Ching-Yung Lin, <font face="arial" color="blue"><a href="http://ieeexplore.ieee.org/document/7033047/">"Mobile App Connecting People based on Personality Detection and Image Perception Analysis"</a></font>. IEEE International Symposium on Multimedia <span style="font-weight: bold;">(ISM)</span> 2014.</li>
-			  <br />
+                                                <li><a class="papertitle" href="https://arxiv.org/abs/1611.09392">Generating Holistic 3D Scene Abstractions for Text-based Image Retrieval</a> [&nbsp;<a class=link href="https://arxiv.org/pdf/1611.09392.pdf">PDF</a>&nbsp;] [&nbsp;<a class=link href="cvpr17-3dscene-poster.pdf">Poster</a>&nbsp;] [ <a class=link href="javascript:alert('Please email me.')">Data</a>&nbsp;] [ <a class=link href="javascript:alert('Please email me.')">Code</a>&nbsp;] [&nbsp;<a class=link href="http://dblp.uni-trier.de/rec/bibtex/journals/corr/LiSNYMD16">Bibtex</a>&nbsp;]<br>
+                                                    Ang Li, Jin Sun, Joe Yue-Hei Ng, Ruichi Yu, Vlad I. Morariu, Larry S. Davis<br>
+                                                    IEEE Conference on Computer Vision and Pattern Recognition <b>(<a href="http://cvpr2017.thecvf.com">CVPR</a>)</b>, Honolulu, Hawaii, 2017.<br>
+                                                    - Invited poster at CVPR 2017 <a href="http://www.visionmeetscognition.org">Vision meets Cognition Workshop</a> on July 21, 2017.<br>
+                                                    - Invited poster at CVPR 2017 <a href="https://bridgesto3d.github.io/">Bridges to 3D Workshop</a> on July 26, 2017.<br>
+                                                    <!-- - Poster "<a class=link href="cvpr17-dc-poster.pdf">Minimizing Human Effort in Vision and Learning</a>" at CVPR 2017 Doctoral Consortium  on July 24, 2017 !--> 
 
-			  <li><span style="font-weight: bold;">Ruichi Yu</span>, Binbin Dai, Wei Xu, <font face="arial" color="blue"><a href="http://www.comm.toronto.edu/~bdai/pub/wcsp2012_SLNRscheduling.pdf">"Enhanced Multiuser Scheduling Using Modified SLNR Metric with Outdated Partial CSI"</a></font>. International Conference on Wireless Communications and Signal Processing <span style="font-weight: bold;">(WCSP)</span> 2012.</li>
+                                                    
 
-			  <br />
+                <li><a class="papertitle" href="javascript:void(0)">Brain Neuron Network Extraction and Analysis of Live Mice from Imaging Videos</a> [&nbsp;<a class=link href="https://www.igi-global.com/article/brain-neuron-network-extraction-and-analysis-of-live-mice-from-imaging-videos/182648">PDF</a>&nbsp;] [&nbsp;<a class=link href="javascript:showbib('yu_2017_igmdem')">Bibtex</a>&nbsp;]<br>
+                                        Ruichi Yu, Jui-Hsin Lai, Shun-Xuan Wang, Ching-Yung Lin<br>
+                                        International Journal of Multimedia Data Engineering and Management <b>(IJMDEM)</b>, 8(3): 1-20, 2017.<br>
+                                        
 
-			</ul>
-				
+            <li><a class="papertitle" href="javascript:void(0)">The Role of Context Selection in Object Detection</a> [&nbsp;<a class=link href="https://arxiv.org/abs/1801.02031">PDF</a>&nbsp;] [&nbsp;<a class=link href="javascript:showbib('yu_2016_bmvc')">Bibtex</a>&nbsp;]<br>
+                                        Ruichi Yu, Xi Chen, Vlad I. Morariu, Larry S. Davis<br>
+                                        British Machine Vision Conference <b>(<a href="http://www.bmva.org/bmvc/2016/index.html">BMVC [Spotlight]</a>)</b>, York, UK, 2016.<br>
+                                        <div id=yu_2016_bmvc style="display:none">
+                                            <pre><code>@InProceedings{yu_2016_bmvc,
+author = {Ruichi Yu and Xi Chen and Vlad I. Morariu and Larry S. Davis},
+title = {The Role of Context Selection in Object Detection},
+booktitle = {British Machine Vision Conference (BMVC)},
+year = {2016}
+}
+                                            </code></pre>
+                                        </div>
 
-			</div>
-			<div class="clear"></div>
-		</section>
-
-		<section>
-			<div class="sectionTitle">
-				<h1>Experience</h1>
-			</div>
-			
-			<div class="sectionContent">
-			<ul>
-			  <li>Perception Software Engineer, Waymo LLC, Mountain View, CA, Jan 2019-present</li>
-			  <br />
-				
-			  <li>Research Assistant, University of Maryland, College Park, MD, Sep 2016-Dec 2018</li>
-			  <br />
-
-			  <li>Summer Intern, Waymo LLC., Mountain View, CA, June 2018-Aug 2018</li>
-			  <br />
-
-			  <li>Research Intern, Comcast Applied Artificial Intelligence Research, Washington, DC, May 2017-Aug 2017</li>
-			  <br />
-
-			  <li>Research Intern, IBM T. J. Watson Research Center, Yorktown, NY, May 2016-Aug 2016</li>
-			  <br />
-
-			  <li>Teaching Assistant, University of Maryland, College Park, MD, Sep 2015 -  May 2016</li>
-			  <br />
-
-			  <li>Data Scientist Co-Op, Apple Inc., Sunnyvale, CA, Apr 2015 - Aug 2015</li>
-			  <br />
-
-			  <li>Teaching Assistant, Columbia University, New York, NY, Jan 2014 - Dec 2014</li>
-			  <br />
-
-			  <li>Infrastructure and Software Intern} AllianceBernstein L.P., New York, NY, June 2014 - Aug 2014</li>
-			  <br />
+           
+                                                            
 
 
-			</ul>
-				
-
-			</div>
-			<div class="clear"></div>
-		</section>
-
-		<section>
-			<div class="sectionTitle">
-				<h1>Honors and Awards</h1>
-			</div>
-			
-			<div class="sectionContent">
-			<ul>
-			  <li>Dean's Fellowship, Computer Science Department in University of Maryland, College Park, 2015</li>
-			  <br />
-
-			  <li>MSTA Fellowship of Computer Science Department in Columbia University, 2014</li>
-			  <br />
-
-			  <li>Best Graduate Student Award of School of Information Science and Engineering, Southeast University (6/214), 2013</li>
-			  <br />
-
-			  <li>Scholarship Sponsored by Baoshan Iron and Steel Company (1/214), 2012</li>
-			  <br />
-
-			  <li>SEU Annual Excellent Student Leader Award (1/214), 2012</li>
-			  <br />
-
-			  
+                                                                    
 
 
-			</ul>
-				
-
-			</div>
-			<div class="clear"></div>
-		</section>
-
-		<section>
-			<div class="sectionTitle">
-				<h1>Professional Service</h1>
-			</div>
-			
-			<div class="sectionContent">
-			<ul>
-			  <li>Conference Program Committee Member or Reviewer: CVPR 2018, NIPS 2018, ACCV 2018, CVPR 2019, ICML 2019, NeurIPS 2019</li>
-			  <br />
+                    </ul>
+                </div>
 
 
-			</ul>
-				
+                <div class=section>
+                    <h3>Professional Service</h3>
+                    
+                            <li class=misc0> Conference Program Committee Member or Reviewer:
+                                <ul>
+                                    <li>Annual Conference on Neural Information Processing Systems 2018, 2019
+                                        <li>IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2018, 2019
+                                            <li>International Conference on Machine Learning (ICML) 2019
+                                                <li>IEEE International Conference on Computer Vision (ICCV) 2019
+                                                    <li>International Joint Conference on Artificial Intelligence (IJCAI) 2019
+                                                            <li>Asian Conference on Computer Vision (ACCV) 2018
+                                                                <li>Uncertainty in Artificial Intelligence (UAI) 2019
+                                </ul>
+                                <!--
+                                    <li class=misc0> Teaching Assistant for
+                                    <ul>
+                                    <li>Fall 2012: <a href="http://www.cs.umd.edu/class/fall2012/cmsc250">CMSC 250 Discrete Structures</a> (by <a href="http://www.cs.umd.edu/~kruskal">Clyde Kruskal</a> and Thomas Reinhardt)
+                                    </ul>
+                                    <li class=misc0> Graduate Coursework
+                                    <ul>
+                                    <li> <a href="http://www.cs.umd.edu/class/fall2014/cmsc754/">CMSC 754 Computational Geometry</a> by <a href="http://www.cs.umd.edu/~mount/">David Mount</a> (Fall 2014)
+                                    <li> CMSC 828B Advanced Topics in Information Processing by <a href="http://www.umiacs.umd.edu/~lsd/">Larry Davis</a> (Fall 2014)
+                                    <li> <a href="http://www2.math.umd.edu/~rvbalan/TEACHING/AMSC808RSpring2014/index.html">MATH 858R Sparse and Low Rank Representations</a> by <a href="http://www.math.umd.edu/~rvbalan/">Radu Balan</a> (Spring 2014)
+                                    <li> <a href="http://www.cs.umd.edu/~hajiagha/AGT10/AGT14.html">CMSC 858F Algorithmic Game Theory</a> by <a href="http://www.cs.umd.edu/~hajiagha/">Mohammad Hajiaghayi</a> (Spring 2014)
+                                    <li> <a href="">CMSC 828C Statistical Pattern Recognition</a> by <a href="http://www.umiacs.umd.edu/users/rama/">Rama Chellappa</a> (Fall 2013)
+                                    <li> <a href="http://www.cs.umd.edu/~djacobs/CMSC733/CMSC733_13.htm">CMSC 733 Computer Processing of Pictorial Information</a> by <a href="http://www.cs.umd.edu/~djacobs/">David Jacobs</a> (Fall 2013)
+                                    <li> <a href="http://lintool.github.com/MapReduce-course-2013s/">CMSC 828G Data-Intensive Computing with MapReduce</a> by <a href="http://www.umiacs.umd.edu/~jimmylin/">Jimmy Lin</a> (Spring 2013)
+                                    <li> <a href="http://www.cs.umd.edu/~djacobs/CMSC828/CMSC828J_13.htm">CMSC 828J Subspaces and Manifolds for Computer Vision</a> by <a href="http://www.cs.umd.edu/~djacobs/">David Jacobs</a> (Spring 2013)
+                                    <li> CMSC 828G Image Understanding by <a href="http://www.umiacs.umd.edu/users/rama/">Rama Chellappa</a> (Fall 2012)
+                                    <li> <a href="http://www.cs.umd.edu/~elman/660.12/syl.html">CMSC 660 Scientific Computing I</a> by <a href="https://www.cs.umd.edu/users/elman/">Howard Elman</a> (Fall 2012)
+                                    </ul>
+                                    !-->
+                    </ul>
+                </div>
 
-			</div>
-			<div class="clear"></div>
-		</section>
-		
-	</div>
-</div>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-3753241-1");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
-</body>
+                <div class=foot style="font-size:10px"></div>
+            </div>
+    </body>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33991125-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+    </script>
+
 </html>
